@@ -14,7 +14,7 @@ function task1($most)
     echo '<br />Name: ';
     print_r($xml->Address[0]->Name->__toString());
 
-    echo '<br />Street: ';
+    echo '<br />Street:';
     print_r($xml->Address[0]->Street->__toString());
 
     echo '<br />City: ';
