@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<PurchaseOrder PurchaseOrderNumber="1A-123" OrderDate="2018-07-15">
+<Address Type="Shipping">
+ <Name>Pavel Tolmaci (Tolmach)</Name>
+ <Street>Oyunskogo 24</Street>
+ <City>Mirniy</City>
+ <State>Yakutiya</State>
+ <Zip>678174</Zip>
+ <Country>RF</Country>
+</Address>
+<Address Type="Billing">
+ <Name>Pavel Tolmaci (Tolmach)</Name>
+ <Street>Oyunskogo 24</Street>
+ <City>Mirniy</City>
+ <State>Yakutiya</State>
+ <Zip>678174</Zip>
+ <Country>RF</Country>
+</Address>
+<DeliveryNotes>The postman brings.</DeliveryNotes>
+<Items>
+ <Item PartNumber="872-AA">
+ <ProductName>Comprehensive learning PHP.</ProductName>
+ <Quantity>1</Quantity>
+ <USPrice>7000 руб.</USPrice>
+ <Comment>I will wait.</Comment>
+ </Item>
+ <Item PartNumber="926-AA">
+ <ProductName>Comprehensive learning PHP.</ProductName>
+ <Quantity>1</Quantity>
+ <USPrice>12000 руб.</USPrice>
+ <ShipDate>2018-07-15</ShipDate>
+ </Item>
+</Items>
+</PurchaseOrder>
