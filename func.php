@@ -123,4 +123,57 @@ function task3()
 }
 
 //зад.2 =======================
-
+function task2($data, $file1, $file2)
+{
+    writeJson($file1, $data);
+    $decrypted = readJson($file1);
+    $transfiguration = randomChange($decrypted, $file2);
+    if ($transfiguration) {
+        echo '<br />';
+        echo 'Изменения есть!';
+        compare($file1, $file2);
+    } else {
+        echo "<br>";
+        echo "Изменений нет!";
+    }
+}
+function writeJson($file, $data)
+{
+    $coded = json_encode($data);
+    file_put_contents($file, $coded);
+}
+function readJson($file1)
+{
+    $json = file_get_contents($file1);
+    $decrypted = json_decode($json, true);
+    return $decrypted;
+}
+function randomChange($decrypted, $file2)
+{
+    $stringArbitrary = rand(0, 8);
+    $columnArbitrary = rand(0, 8);
+    if ($stringArbitrary < 4 && $columnArbitrary < 3) {
+        $decrypted[$stringArbitrary][$columnArbitrary] = "Изменен";
+        writeJson($file2, $decrypted);
+        return true;
+    } else {
+        return false;
+    }
+}
+function compare($file1, $file2)
+{
+    $decrypted1 = readJson($file1);
+    $decrypted2 = readJson($file2);
+    for ($row = 0; $row < count($ddecrypted1); $row++) {
+        for ($column = 0; $column < count($decrypted1[$row]); $column++) {
+            if ($decrypted1[$row][$column] != $decrypted2[$row][$column]) {
+                echo "<br>";
+                echo "Значения не равны! Строека: " . $row . ". Столбец: " . $column . ".";
+                echo "<br>";
+                echo "В файле output.json значение: " . $decrypted1[$row][$column];
+                echo "<br>";
+                echo "В файле output2.json значение: " . $decrypted2[$row][$column];
+            }
+        }
+    }
+}
