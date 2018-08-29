@@ -93,8 +93,8 @@ function task4()
     $papka = file_get_contents('https://en.wikipedia.org/w/api.php?action=query&titles=Main%20Page&prop=revisions&rvprop=content&format=json');
     $papka = json_decode($papka, true);
     echo '<pre>';
-    echo 'Page ID: ' . $papka['query']['pages']['15580374']['pageid'] . '<br />';
-    echo 'Title: ' . $papka['query']['pages']['15580374']['title'];
+    echo 'Page ID: ' . $papka['query']['pages']['549237610']['pageid'] . '<br />';
+    echo 'Title: ' . $papka['query']['pages']['549237610']['title'];
 }
 
 //зад.3 =======================
