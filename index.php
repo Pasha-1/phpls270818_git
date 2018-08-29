@@ -18,3 +18,4 @@ echo "<div class='jumbotron'>";
 echo '<h4>Зад. 3</h4>';
 echo '<p>', task3(), '</p>';
 echo '</div>';
+//зад.2 =======================
