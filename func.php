@@ -133,7 +133,7 @@ function task2($data, $file1, $file2)
         echo 'Изменения есть!';
         compare($file1, $file2);
     } else {
-        echo "<br>";
+        echo '<br />';
         echo "Изменений нет!";
     }
 }
@@ -167,11 +167,11 @@ function compare($file1, $file2)
     for ($row = 0; $row < count($ddecrypted1); $row++) {
         for ($column = 0; $column < count($decrypted1[$row]); $column++) {
             if ($decrypted1[$row][$column] != $decrypted2[$row][$column]) {
-                echo "<br>";
+                echo '<br />';
                 echo "Значения не равны! Строека: " . $row . ". Столбец: " . $column . ".";
-                echo "<br>";
+                echo '<br />';
                 echo "В файле output.json значение: " . $decrypted1[$row][$column];
-                echo "<br>";
+                echo '<br />';
                 echo "В файле output2.json значение: " . $decrypted2[$row][$column];
             }
         }
